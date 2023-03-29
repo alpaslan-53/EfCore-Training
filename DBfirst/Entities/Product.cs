@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DBfirst.Entities;
+namespace Alp.Aslans;
 
 public partial class Product
 {

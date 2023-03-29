@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DBfirst.Entities;
+namespace Alp.Aslans;
 
 public partial class Order
 {
@@ -34,4 +34,6 @@ public partial class Order
     public string? ShipCountry { get; set; }
 
     public virtual Customer? Customer { get; set; }
+
+    public virtual Employee? Employee { get; set; }
 }
