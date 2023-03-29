@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DBfirst;
+namespace DBfirst.Entities;
 
 public partial class Customer
 {

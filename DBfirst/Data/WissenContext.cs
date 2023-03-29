@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using DBfirst.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DBfirst;
+namespace DBfirst.Data;
 
-public partial class NorthwndContext : DbContext
+public partial class WissenContext : DbContext
 {
-    public NorthwndContext()
+    public WissenContext()
     {
     }
 
-    public NorthwndContext(DbContextOptions<NorthwndContext> options)
+    public WissenContext(DbContextOptions<WissenContext> options)
         : base(options)
     {
     }
