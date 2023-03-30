@@ -8,9 +8,9 @@ public class DenemeDbContext :DbContext
 {
    public DbSet<Urun> Urunler { get; set; }
    public DbSet<Musteri> Musteriler { get; set; }
-    public DbSet<Siparis> Siparisler { get; set; }
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
+    { //Provider:usesqlserver,connection string="bu alan sanıyorum :D"
        optionsBuilder.UseSqlServer("Server=DESKTOP-E30TBPJ;Database=CodeFirst;Trusted_Connection=True;TrustServerCertificate=Yes"
            );
     }
