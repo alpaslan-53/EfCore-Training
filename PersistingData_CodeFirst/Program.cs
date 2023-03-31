@@ -43,7 +43,7 @@ DbFirstKitaplık501DbContext context = new();
 //context.Books.Add(book2);
 //context.Books.AddRange(book1, book, book2);
 
-await context.SaveChangesAsync();
+//await context.SaveChangesAsync();
 
 #endregion
 
@@ -59,13 +59,13 @@ await context.SaveChangesAsync();
 
 
 
-Book bookOrnek = new()
-{
-    Id = 1,
-    KitapAdi = "Karpuz",
-    Fiyat = 799
-};
-context.Books.Update(bookOrnek);
+//Book bookOrnek = new()
+//{
+//    Id = 1,
+//    KitapAdi = "Karpuz",
+//    Fiyat = 799
+//};
+//context.Books.Update(bookOrnek);
 //ChangeTracker mekanizması tarafından takip edilemeyen nesnelerin güncellenebilmesi açısından update fonksiyonu kullnaılmaktadır. bu takip edilememe meselesini şöyle algılayabilirz.İlk yaptığımız güncelleme örneğinde veritabanımıza context üzerinden bir sorgu atıp isteidğimiz Id ye sahip olan nesneyi programımıza çağırdık.Sonrasında bu gelen ve haliyle takip edilen nesen üzerinde degişiklik yapıp savechanges dedik.ŞUan ise context üzerinde herhangi bir değişiklik ypamadan ve haliyle taikp edemediğimiz bir nesne üzerine işlem yapmak istedik bu yüzden update metodu kullanmak zorunda kaldık.
 //await context.SaveChangesAsync();
 
