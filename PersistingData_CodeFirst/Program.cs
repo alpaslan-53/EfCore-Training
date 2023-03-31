@@ -70,13 +70,29 @@ context.Books.Update(bookOrnek);
 //await context.SaveChangesAsync();
 
 
+#region Toplu Update
+//var kitaplar = await context.Books.ToListAsync();
+//foreach(var item in kitaplar)
+//{
+//    item.KitapAdi += " :)";
+//}
+//await context.SaveChangesAsync();
+#endregion
+#region Veri Silme
+//Book book1 = context.Books.FirstOrDefault(u => u.Id == 3);
+//context.Books.Remove(book1);
+//context.SaveChanges();
 
-var kitaplar = await context.Books.ToListAsync();
+#endregion
+
+//Toplu silme
+List<Book> kitaplar = context.Books.ToList();
 foreach(var item in kitaplar)
 {
-    item.KitapAdi += " :)";
+    Console.WriteLine(item.KitapAdi); //kitaplarım geldi 
 }
-await context.SaveChangesAsync();
+context.Books.RemoveRange(kitaplar);
+context.SaveChanges();
 
 
 
