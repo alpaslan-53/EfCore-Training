@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Queries.Migrations
 {
-    [DbContext(typeof(Ecommerc501Dbcontext))]
+//    [DbContext(typeof(Ecommerc501Dbcontext))]
     partial class Ecommerc501DbcıntextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

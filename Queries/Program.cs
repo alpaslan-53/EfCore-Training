@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 Console.WriteLine("");
 
-Ecommerc501Dbcontext context = new();
+//Ecommerc501Dbcontext context = new();
 
 
 
@@ -218,26 +218,9 @@ Ecommerc501Dbcontext context = new();
 #endregion
 
 
+#endregion
 
 
 
 
 
-
-
-public class Ecommerc501Dbcontext: DbContext
-{
-
-    public DbSet<Product> Products { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-E30TBPJ;Database=CodeFirst501ETicaretDB;Trusted_Connection=True;TrustServerCertificate=Yes");
-    }
-}
-public class Product
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public double Price { get; set; }
-}
