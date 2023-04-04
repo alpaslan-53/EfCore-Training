@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirst", "CodeFirst\Code
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistingData_CodeFirst", "PersistingData_CodeFirst\PersistingData_CodeFirst.csproj", "{C917BD80-CF3F-43A7-BF1A-9EA2F6D3807A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelationShips", "RelationShips\RelationShips.csproj", "{FA9B09F4-2C97-4C61-963F-41CAC6D37FD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelationShips", "RelationShips\RelationShips.csproj", "{FA9B09F4-2C97-4C61-963F-41CAC6D37FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneToManyRelationShips", "OneToManyRelationShips\OneToManyRelationShips.csproj", "{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FA9B09F4-2C97-4C61-963F-41CAC6D37FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9B09F4-2C97-4C61-963F-41CAC6D37FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9B09F4-2C97-4C61-963F-41CAC6D37FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
