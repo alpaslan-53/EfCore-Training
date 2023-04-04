@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelationShips", "RelationSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneToManyRelationShips", "OneToManyRelationShips\OneToManyRelationShips.csproj", "{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManyToManyRelationships", "ManyToManyRelationships\ManyToManyRelationships.csproj", "{30FB79B3-617B-4194-9F6C-70E33033634B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA68D24D-92BA-404F-B27F-EA45C6C7F8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FB79B3-617B-4194-9F6C-70E33033634B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FB79B3-617B-4194-9F6C-70E33033634B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FB79B3-617B-4194-9F6C-70E33033634B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FB79B3-617B-4194-9F6C-70E33033634B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

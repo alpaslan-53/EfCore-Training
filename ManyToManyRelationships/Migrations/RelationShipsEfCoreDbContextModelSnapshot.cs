@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace OneToManyRelationShips.Migrations
+namespace ManyToManyRelationships.Migrations
 {
     [DbContext(typeof(RelationShipsEfCoreDbContext))]
     partial class RelationShipsEfCoreDbContextModelSnapshot : ModelSnapshot
@@ -20,33 +20,13 @@ namespace OneToManyRelationShips.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Department", b =>
+            modelBuilder.Entity("Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("DepartmanAdi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Departments");
-                });
-
-            modelBuilder.Entity("Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("DxId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -54,25 +34,68 @@ namespace OneToManyRelationShips.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DxId");
-
-                    b.ToTable("Employees");
+                    b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("Employee", b =>
+            modelBuilder.Entity("Book", b =>
                 {
-                    b.HasOne("Department", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DxId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("YazarKitap", b =>
+                {
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AuthorId", "BookId");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("YazarKitap");
+                });
+
+            modelBuilder.Entity("YazarKitap", b =>
+                {
+                    b.HasOne("Author", "Author")
+                        .WithMany("Books")
+                        .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Department");
+                    b.HasOne("Book", "Book")
+                        .WithMany("Authors")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("Department", b =>
+            modelBuilder.Entity("Author", b =>
                 {
-                    b.Navigation("Employees");
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("Book", b =>
+                {
+                    b.Navigation("Authors");
                 });
 #pragma warning restore 612, 618
         }
